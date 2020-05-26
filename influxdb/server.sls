@@ -5,7 +5,7 @@
 {%- if not server.container_mode %}
 influxdb_packages:
   pkg.installed:
-  - names: {{ server.pkgs|tojson }}
+  - names: {{ server.pkgs|yaml }}
   - force_yes: True
 {%- endif %}
 
